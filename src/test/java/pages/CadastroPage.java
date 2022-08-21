@@ -88,10 +88,10 @@ public class CadastroPage extends Utils {
     public void clickRegister(){
         driver.findElement(submit_button).click();
     }
-    public void validaCadastro(){
+    public void validaCadastro(String nome, String sobrenome){
         waitElementBePresent(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a"), 20);
         String resultado_atual = driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")).getText();
-        Assert.assertEquals("Natalia De Santana",resultado_atual);
+        Assert.assertEquals(nome + " "+ sobrenome,resultado_atual);
     }
 
 

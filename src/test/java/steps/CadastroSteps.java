@@ -11,11 +11,14 @@ import runner.RunCucumberTest;
 public class CadastroSteps extends RunCucumberTest {
     CadastroPage cadastropage = new CadastroPage(driver);
 
+    String nome = "Natalia";
+    String sobrenome = "de Santana";
+
     @Quando("^eu preencho o formulario de cadastro$")
     public void eu_preencho_o_formulario_de_cadastro() {
         cadastropage.selectTitle(2);
-        cadastropage.preencheNome("Natalia");
-        cadastropage.preencheSobrenome("De Santana");
+        cadastropage.preencheNome(nome);
+        cadastropage.preencheSobrenome(sobrenome);
         cadastropage.preencherSenha("#11245ffD");
         cadastropage.selecionaAniversario(23, 12, "1997");
         cadastropage.preencheAddress("Rua Qualquer");
@@ -33,7 +36,7 @@ public class CadastroSteps extends RunCucumberTest {
 
     @Então("^vejo cadastro realizado com sucesso$")
     public void vejo_a_mensagem_de_cadastro_realizado_com_sucesso() {
-       cadastropage.validaCadastro();
+       cadastropage.validaCadastro(nome, sobrenome);
     }
 
 }
