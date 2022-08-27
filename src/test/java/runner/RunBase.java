@@ -7,11 +7,15 @@ import org.openqa.selenium.remote.BrowserType;
 
 public class RunBase {
      static WebDriver driver;
-     private enum Browser{
+     public enum Browser{
          CHROME, FIREFOX
      }
      public static WebDriver getDriver(){
-        return null;
+         if (driver == null){
+            return getDriver(Browser.CHROME);
+         }else {
+             return driver;
+         }
      }
 
     public static WebDriver getDriver(Browser browser){

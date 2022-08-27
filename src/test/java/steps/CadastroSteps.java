@@ -9,7 +9,7 @@ import pages.CadastroPage;
 import runner.RunCucumberTest;
 
 public class CadastroSteps extends RunCucumberTest {
-    CadastroPage cadastropage = new CadastroPage(driver);
+    CadastroPage cadastropage = new CadastroPage();
 
     String nome = "Natalia";
     String sobrenome = "de Santana";
