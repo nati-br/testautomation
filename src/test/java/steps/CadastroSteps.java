@@ -22,7 +22,7 @@ public class CadastroSteps extends RunCucumberTest {
         cadastropage.preencherSenha("#11245ffD");
         cadastropage.selecionaAniversario(23, 12, "1997");
         cadastropage.preencheAddress("Rua Qualquer");
-        cadastropage.SelecionarState("Colorado");
+        cadastropage.selecionarState("Colorado");
         cadastropage.preencheCity("Denver");
         cadastropage.preenchePostalcode("12345");
         cadastropage.preenchePhoneMobile("+5500123456789");

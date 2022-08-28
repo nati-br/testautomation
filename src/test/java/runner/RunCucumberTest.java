@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 @CucumberOptions(
         plugin = {},
         features = {"src/test/resources/features"},
-        tags = {"~@ignore"},
+        tags = {"@enviar-mensagem-sucesso"},
         glue = {"steps"}
 
 )

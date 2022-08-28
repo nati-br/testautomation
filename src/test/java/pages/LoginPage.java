@@ -1,12 +1,8 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import runner.RunCucumberTest;
 import support.Utils;
-
-import java.util.Random;
-
 import static support.Utils.getRandomEmail;
 
 public class LoginPage  extends RunCucumberTest {

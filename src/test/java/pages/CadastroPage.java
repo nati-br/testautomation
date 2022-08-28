@@ -2,7 +2,6 @@ package pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import runner.RunCucumberTest;
 import support.Utils;
@@ -71,7 +70,7 @@ public class CadastroPage extends RunCucumberTest {
         getDriver().findElement(city_field).sendKeys(city);
     }
 
-    public void SelecionarState (String state){
+    public void selecionarState (String state){
         Select select_state = new Select(getDriver().findElement(state_field));
         select_state.selectByVisibleText(state);
     }
